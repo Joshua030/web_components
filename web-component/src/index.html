@@ -1,0 +1,54 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/web-component.esm.js"></script>
+    <script nomodule src="/build/web-component.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      .side-nav ul {
+        list-style: none;
+      }
+
+      .side-nav li {
+        margin: 1rem 0;
+      }
+
+      .slide-nav a {
+        text-decoration: none;
+        color: #613f00;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="side-drawer-btn">Open Side Menu</button>
+    <uc-side-drawer class="side-nav" main-title="Main Menu">
+      <nav>
+        <ul>
+          <li><a href="/">A Link</a></li>
+          <li><a href="/">Another Link</a></li>
+          <li><a href="/">A third Link</a></li>
+        </ul>
+      </nav>
+    </uc-side-drawer>
+    <script>
+      const sideDrawer = document.querySelector('uc-side-drawer');
+      const sideDrawerBtn = document.getElementById('side-drawer-btn');
+      sideDrawerBtn.addEventListener('click', () => {
+        console.log(sideDrawer.opened, 'before');
+        // sideDrawer.opened = !sideDrawer.opened;
+        sideDrawer.open();
+        console.log(sideDrawer.opened, 'after');
+      });
+      // setTimeout(() => {
+      //   sideDrawer.setAttribute('main-title', 'Updated Main Menu');
+      // }, 3000);
+    </script>
+  </body>
+</html>
