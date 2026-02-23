@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web components</title>
+    <style>
+      div {
+        border: 2px solid orange;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <template id="tooltip-template">
+      <slot>Default text </slot><span> : </span>
+    </template> -->
+    <my-tooltip
+      text="Web component is a set of standards for building reusable UI components."
+      ><span class="highlight">Tooltip text</span></my-tooltip
+    >
+    <my-tooltip class="important">Tooltip text 2</my-tooltip>
+    <div>This does not get the web component styles</div>
+    <a is="confirm-link" href="https://www.google.com">Google</a>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+  </body>
+</html>
