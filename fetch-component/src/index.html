@@ -1,0 +1,23 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/fetch-component.esm.js"></script>
+    <script nomodule src="/build/fetch-component.js"></script>
+  </head>
+  <body>
+    <uc-stock-price stock-symbol="AAPL"></uc-stock-price>
+    <uc-stock-finder></uc-stock-finder>
+    <!-- <script>
+      const stockFinderEl = document.querySelector('uc-stock-finder');
+      stockFinderEl.addEventListener('ucSymbolSelected', event => {
+        console.log('Symbol selected: ', event.detail);
+        // const stockPriceEl = document.querySelector('stock-price');
+        // stockPriceEl.stockSymbol = event.detail;
+      });
+    </script> -->
+  </body>
+</html>

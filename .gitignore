@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Stencil build output
+dist/
+www/
+loader/
+.stencil/
+
+# Logs
+*.log
+logs/
+log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Lock files (keep only one; uncomment the one you don't use)
+# package-lock.json
+# yarn.lock
+
+# Temp & swap files
+*.tmp
+*.tmp.*
+*~
+*.sw[mnpcod]
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+$RECYCLE.BIN/
+UserInterfaceState.xcuserstate
+
+# Editor directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# CSS preprocessors
+.sass-cache/
+
+# Misc
+.versions/
+coverage/
+.nyc_output/
